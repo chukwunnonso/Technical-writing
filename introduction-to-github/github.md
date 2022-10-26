@@ -18,9 +18,9 @@ GitHub is obviously made up of the keywords Git and Hub. Before continuing on to
 
 Linus Torvalds created the open source project Git in 2005. Git is a distributed version control system (DVCS), which means that the developer's local machine has a mirror copy of the full source code and history. It is the most widely adopted version control system globally in terms of popularity. This widespread adoption could be credited to the fact that it can be installed on Windows, MacOS, or Linux operating systems. Below is a walkthrough of the installation process using Windows Operating System. But first visit [here](https://git-scm.com/.) 
 
+![Image](images\git_download.png)
 ![Image](images\github_sign_up.png)
 
-![Image](images\git_download.png)
 
 
 GitHub is a platform for hosting Git repositories on a distant server or the internet. Just so you know, repository simply means folders. You may also hear some people  refer to them as "repos" but the meaning is the same. GItHub makes it simple to connect with other developers all over the world. In addition to this, it offers developers the chance to improve their skills by contributing to the open source projects of others.  Open source are projects that you can contribute to and modify. GitHub depends heavily on Git, so everytime you hear GitHub, know that git is in the background.
@@ -41,8 +41,8 @@ Despite being combined, Git and GitHub have different features. We will list a h
 |  Git is a software   | GitHub is a service        |
 | GitHub is centralized     | Git is distributed.       |
 | Git does not have a provision for managing user data.      | GitHub has a system for managing user data       |
+| git was first introduced in 2005.      | GitHub was introduced in 2008.      |
 
-| git was first introduced in 2005.      | GitHub was first introduced in 2008.       |
 
 
 ### Clone (Show how to do cloning)
@@ -74,11 +74,17 @@ Commit (Show how to do a commit)
 
 Git commit is always preceded by a very popular command known as the git add. Imagine the git add as a command used to bring all the files we want to take a snapshot of to the stage. The git commit is the command that takes the snapshot.  Any file that you have not staged will not be committed. Committed files represent a safe version of your project, that can be changed only when we ask Git to do so.
 
-git commit -m "This is how to commit"   The flag m stands for message.
+```
+    git commit -m "This is how to commit"
+    
+    The flag m stands for message.
+```
 
+Errors in the commit message can be overwritten using 
 
-Errors in the commit message can be overwritten using the git commit --amend “This is the correct message”
-
+```
+ git commit --amend “This is the correct message”
+```
 
 Pull request (Show how to do a pull request):
 
@@ -86,45 +92,57 @@ Collaborating with others is fantastic. Effective collaboration necessitates com
 
 After cloning, Open the folder in your favorite Integrated Development Environment. I will be using Visual Studio Code.
 
+```
+    Enter git checkout -b “correct-spelling-error” in your terminal after cloning the project. This command 
+ ```   
+    creates a new branch. Go to the file where you want to make changes and perform the change.
+    Type the following one after the other
 
-Enter git checkout -b “correct-spelling-error” in your terminal after cloning the project. This command creates a new branch. Go to the file where you want to make changes and perform the change. 
-Type the following one after the other 
-“git status” to see the files you have modified
-“git diff” shows the differences between the branches
-“git add” the name of the file that you modified
- git commit -m “made spelling correction”
-git push origin correct-spelling-error
+ ```     
+    “git status” to see the files you have modified
+    “git diff” shows the differences between the branches
+    “git add” the name of the file that you modified
+    git commit -m “made spelling correction”
+    git push origin correct-spelling-error
+```
 
 Then go back to github you will find a green button that says “compare and pull request” click it and give a descrription of the change you made and create a pull request. 
 
 
-GitHub Desktop vs. Github CLI
+## GitHub Desktop vs. Github CLI
 
-
-Both Git
-
-GitHub Desktop
+### GitHub Desktop
 GitHub Desktop, in a nutshell, makes it simpler to work with both local and cloud-hosted repositories and simplifies your work. Eliminating any potential roadblocks and Increase your productivity are the two main objectives of GitHub desktop.
 
-Visit https://desktop.github.com/ to get it installed on your local computer.
+Visit [this link](https://desktop.github.com/) to get it installed on your local computer.
 
-Cloning repository is super easy GitHub desktop.
+![Image](images/github_desktop.png)
 
 
-GitHub CLI
+### GitHub CLI
 
 GitHub CLI stands for GitHub Command Line Interface. It helps you to connect with GitHub from your terminal without having to switch applications. 
 
-Think of the GitHub CLI when you consider ease. There is no longer any need to constantly switch from the terminal to the browser or the GitHub desktop application because GitHUb CLI lets you utilize GitHub in the terminal. 
-
-the user to become accustomed to and at ease using the terminal, which is a crucial skill for engineers. Who doesn't enjoy the feeling of being a hacker, after all?
+Think of the GitHub CLI when you consider ease. It eliminates the need for switching from the terminal to the browser or the GitHub desktop application while trying to access or host a repository. Another advantage of GitHub CLI is that it makes you become accustomed to working with the terminal, which is a crucial skill for engineers. Who doesn't enjoy the feeling of being a hacker, after all?
 
 
-To install GitHub CLI is very easy just visit the https://cli.github.com/
+To install GitHub CLI is very easy just visit [this link](https://cli.github.com/). Then
+```
+    gh auth login
+```
+
+![Image](images/github_cli_terminal.png)
+
+
+| GitHub CLI      | GitHub Desktop |
+| ----------- | ----------- |
+| GitHub CLI is an interface in your terminal      | GitHub desktop uses GUI       |
+|  GitHub CLI is a command line tool   | GitHub desktop is an application.        |
+| GitHub CLI uses commands     | GitHub desktop does not use commands.       |
+| Downloading GitHub CLI takes smaller memory.       | GitHub desktop requires more memory space.      |
 
 
 
 
-
-In conclusion, with this that we have covered so far, i am convinced that you will be able to keep track of the projects that you are working on and also be able to contribute to other open source projects that are freely available.
+With this that we have covered so far, you will be able to keep track of the projects that you are working on and also be able to contribute to other open source projects that are freely available without been afraid of losing any of your files and projects. Keep building!
 
