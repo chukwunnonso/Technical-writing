@@ -1,9 +1,7 @@
 # Introduction to Github
 
-Early in your programming career, even before learning version control, working on fascinating projects is usually enjoyable. However, there is a risk that you could lose your files if your storage drive fails or your machine crashes, both of which would be unpleasant experiences. Even if you have no prior experience or knowledge, this article aims to make version control with Git and GitHub more understandable.
-
 ## Table of content
-
+- Introduction 
 - What is GitHub
 - Why GitHub
 - Git vs. GitHub
@@ -11,12 +9,16 @@ Early in your programming career, even before learning version control, working 
 - Pull request (Show how to do a pull request)
 - Commit (Show how to do a commit)
 - GitHub Desktop vs. Github CLI
+  
+## Introduction
+The idea of working on fascinating projects is usually enjoyable. However, having answers to "How can we secure the project history and keep track of our progress?" will keep us on the safe side. The goal of this article is to provide answers to this questions using Git and GitHub.
+
 
 ## What is GitHub
 
-GitHub is obviously made up of the keywords Git and Hub. Before continuing on to GitHub, let me explain what Git is to you.
+The words "Git" and "Hub" makeup GitHub. Let's briefly discuss Git before moving on to what GitHub is.
 
-Linus Torvalds created the open source project Git in 2005. Git is a distributed version control system (DVCS), which means that the developer's local machine has a mirror copy of the full source code and history. Globally, Git is the most adopted version control system in terms of popularity. This widespread adoption could be credited to its compatibility on Windows, MacOS, or Linux operating systems. Below is a walkthrough of the installation process using Windows Operating System. But first visit [here](https://git-scm.com/.) to download it.
+ Git is a distributed version control system (DVCS), which means that your local machine will have a mirror copy of the full source code and history. Globally, Git is the most adopted version control system in terms of popularity. We could credit this widespread adoption to its compatibility on Windows, MacOS, or Linux operating systems. Below is a walkthrough of the installation process using Windows Operating System. First visit [here](https://git-scm.com/.) to download Git to your machine.
 
 ![Image](images\git_download.png)
 ![Image](images\github_sign_up.png)
@@ -27,10 +29,20 @@ GitHub is a platform for hosting Git repositories on a distant server or the int
 
 For you to be able to use GitHub, you need to create an account or sign up by visiting the GitHub website [here](https://github.com/) 
 
+## Why GitHub
+Using GiHub offers a lot of advantages. To help you understand why you ought to start utilizing GitHub, I'll outline a few.
 
+- With GitHub, securing your projects with top level security only takes a few seconds.
 
+- GitHub was created with all of your needs in mind,  whether you are a seasoned developer or just getting started.
+-GitHub is built with the idea that people are social beings, making it simple for you to connect and cooperate with other developers from across the world and growing your network.
+-GitHub allows you to work independently on a personal project as well as with others to collaborate on a collaborative project.
+- Using GitHub, you may enhance open source projects in a manner similar to humanitarian aid. 
+- Due to the exponential growth of mobile users, GitHub mobile now enables access to your repository from anywhere.
+- GitHub is an institution that makes learning accessible to everyone and serves as more than just a platform for storing repositories.
+- Non-coders can also utilize GitHub, including designers, writers, and content producers.
 
-Git vs Github
+## Git vs Github
 
 
 Despite being combined, Git and GitHub have different features. We will list a handful of them here.
@@ -41,6 +53,8 @@ Despite being combined, Git and GitHub have different features. We will list a h
 |  Git is a software   | GitHub is a service        |
 |  Git is distributed.    | GitHub is centralized meaning that it is controlled by an authority.       |
 | Git does not manage user data.      | GitHub  manages user data.       |
+| Git was created by Linus Torvalds.      | GitHub  was created by Chris Wanstrath, P. J. Hyett, Tom Preston-Werner, and Scott Chacon       |
+| Git is written in C programming language      | GitHub  was developed with Ruby on Rails       |
 | Git was first launched in 2005.      | GitHub was launched in 2008.      |
 
 
