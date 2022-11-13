@@ -11,7 +11,7 @@
 - GitHub Desktop vs. Github CLI
   
 ## Introduction
-The idea of working on fascinating projects is usually enjoyable. However, having answers to "How can we secure the project history and keep track of our progress?" will keep us on the safe side. The goal of this article is to provide answers to this questions using Git and GitHub.
+The idea of working on fascinating projects is usually enjoyable. However, having answers to "How can we secure the project history and keep track of our progress?" will keep us on the safe side. Let us answer these questions using Git and GitHub.
 
 
 ## What is GitHub?
@@ -19,34 +19,33 @@ The idea of working on fascinating projects is usually enjoyable. However, havin
 The words "Git" and "Hub" makeup GitHub. Let's briefly discuss Git before moving on to what GitHub is.
 
 ### What is Git?
- Git is a distributed version control system (DVCS), which means that your local machine will have a mirror copy of the full source code and history. Globally, Git is the most adopted version control system in terms of popularity. We could credit this widespread adoption to its compatibility on Windows, MacOS, or Linux operating systems. Below is a walkthrough of the installation process using Windows Operating System. First visit [here](https://git-scm.com/.) to download Git to your machine.
+ Git is a distributed version control system (DVCS), which means that your local machine will have an exact mirror copy of the full source code and history. Globally, Git is the most adopted version control system in terms of popularity. We could credit this widespread adoption to its compatibility on Windows, MacOS, ond Linux operating systems. Below is a walkthrough of the installation process using Windows Operating System. Go [here](https://git-scm.com/.) to download Git to your machine.
 
 ![Image](images\git_download.png)
 ![Image](images\github_sign_up.png)
 
 
 
-GitHub is a platform for hosting Git repositories on a distant server or the internet. Just so you know, repository means folder. You may also hear some people  refer to repository as "repo" which is a short form for it. GItHub simplifies connecting with developers across the globe. It offers you the chance to improve your skills by contributing to open source projects of others.  Open source are projects that you can contribute to and modify. Git is essential to GitHub which means that GitHub depends heavily on Git.
+GitHub is a platform for hosting Git repositories on a distant server or the internet. GItHub simplifies connecting with developers across the globe. It offers you the chance to improve your skills by contributing to open source projects of others.  Open source are projects that you can contribute to and modify. Git is essential to GitHub which means that GitHub depends heavily on Git.
 
-For you to be able to use GitHub, you need to create an account or sign up by visiting the GitHub website [here](https://github.com/) 
+> Just so you know, repository means folder. You may also hear some people  refer to repository as "repo" which is a short form for it.
+
+To use GitHub, you need to create an account or sign up by visiting the [GitHub website.](https://github.com/) 
 
 ## Why GitHub
-Using GiHub offers a lot of advantages. To help you understand why you ought to start utilizing GitHub, I'll outline a few.
 
-- With GitHub, securing your projects with top level security only takes a few seconds and it is very easy for seasoned developer, early career programmers and even non coders and like dessigners and content producers.
-
-- GitHub is built with the idea that people are social beings, making it simple for you to connect and cooperate with other developers from across the world and growing your network.
-- GitHub simplifies working independently on a personal project as well as with a team for a collaborative project.
-- Using GitHub, you may enhance open source projects in a manner similar to humanitarian aid. 
-- Due to the exponential growth of mobile users, GitHub mobile now enables access to your repository from anywhere.
-- GitHub is host to millions of repository thereby making learning accessible to everyone and serves as more than just a platform for storing repositories.
--  Due to the exponential growth of mobile users, GitHub mobile now enables access to your repository from anywhere.
-
+| Features      | Why use GitHUB |
+| ----------- | ----------- |
+| 1. Security      | With GitHub, securing your projects with top level security only takes a few seconds.       |
+| 2. Ease of Use      | GitHub is suitable for seasoned developer, early career programmers,  designers and writers.       |
+| 3. Socials   | GitHub is built with the idea that people are social beings, making it simple for you to connect and cooperate with other developers from across the world and growing your network.        |
+|4.  Productivity    |  GitHub simplifies working independently on a personal project as well as with a team for a collaborative project.       |
+|5.  Open Source Contribution      | Similar to humanitarian services, improving open source project is easy using GitHub.         |
+| 6. Education      |  GitHub is host to millions of free repository you can utilize when learning new concepts or preparing for interviews.        |
+| 7. Personal  Development    |  GitHub education offers student access to frontendmasters, a platform where they can gain on demand tech skills.        |
 
 
 ## Git vs Github
-
-Despite being used together, Git and GitHub are different. We will list a handful of them here.
 
 | Git      | GitHub |
 | ----------- | ----------- |
@@ -54,7 +53,7 @@ Despite being used together, Git and GitHub are different. We will list a handfu
 |  Git is a software   | GitHub is a service        |
 |  Git is distributed.    | GitHub is centralized meaning that it is controlled by an authority.       |
 | Git does not manage user data.      | GitHub  manages user data.       |
-| Git was created by Linus Torvalds.      | GitHub  was created by Chris Wanstrath, P. J. Hyett, Tom Preston-Werner, and Scott Chacon       |
+| Git was created by Linus Torvalds.      | GitHub  was collectively created by Chris Wanstrath, P. J. Hyett, Tom Preston-Werner, and Scott Chacon       |
 | Git is written in C programming language      | GitHub  is developed with Ruby on Rails       |
 | Git was first launched in 2005.      | GitHub was launched in 2008.      |
 
@@ -78,19 +77,24 @@ Assuming you found the project you want to clone to your desktop,
     cd Desktop
     git clone HTTPS url
 ```   
-
+<br>
 
 ![Image](images/github_desktop_clone.png)
 
+<br>
+
 ![Image](images/clone_in_terminal.png)
 
-Take a look at the images below to learn how you can clone using GitHub desktop. 
-
+> To learn how you can clone using GitHub desktop. 
+<br>
 ![Image](images/github_desktop_clone.png)
 
 ![Image](images/final_clone_desktop.png)
 
-Changes you make to projects will be effected only if you have write permissions to the repository. This restriction enables GitHub to protect projects.
+<br>
+> Changes you make to projects will be effected only if you have write permissions to the repository. This restriction enables GitHub to protect projects.
+
+<br>
 
 ### Commit (How to commit)
 
@@ -102,7 +106,7 @@ Git commit is always preceded by a very popular command known as the git add. Im
     The flag m stands for message.
 ```
 
-To correct an error in commit message use
+ *To correct an error in commit message use*
 
 ```
  git commit --amend “This is the correct message”
@@ -112,11 +116,15 @@ To correct an error in commit message use
 
 Collaboration is one key features of GitHub. Effective team work necessitates communication. When you pull request, the project owner examines the changes and either accept or reject the change. Pull request helps with efficient communication. You can perform pull requests via GitHub, GitHub Desktop, GITHUB CLI, etc. After submitting a pull request, a page comparing the two branches will show up so you can view the differences. 
 
-Here is how you can pull request.
+ *Here is how you can pull request.*
 
-Open the cloned folder in your favorite Integrated Development Environment for example Visual Studio Code.
+<br>
 
-Open the terminal VS Code using 
+> Open the cloned folder in your favorite Integrated Development Environment for example Visual Studio Code.
+
+<br>
+
+*Open the terminal in VS Code using* 
 
 ```
     cmd + shift + ~
@@ -135,7 +143,7 @@ git checkout -b “correct-spelling-error”
    4. git commit -m “made spelling correction”
    5. git push origin correct-spelling-error
 
-Go back to GitHub you should find a green button that says *compare and pull request* click it and give a descrription of the change you made and create a pull request. 
+> Go back to GitHub you should find a green     button that says *compare and pull request* click it and give a descrription of the change you made > and create a pull request. 
 
 ### GitHub Desktop
 GitHub Desktop, in a nutshell, makes it simpler to work with both local and cloud-hosted repositories and simplifies your work. Eliminating any potential roadblocks and Increasing your productivity are the two main objectives of GitHub desktop.
@@ -152,9 +160,9 @@ GitHub CLI stands for GitHub Command Line Interface. It helps you to connect wit
 Think of the GitHub CLI when you consider ease. It eliminates the need for switching from the terminal to web browser or the GitHub desktop application while trying to access or host a repository. GitHub CLI makes you become accustomed to working with the terminal, which is a crucial skill. You like feeling like a hacker, after all.
 
 
-Download GitHub CLI from [here](https://cli.github.com/).
+Install [GitHub CLI](https://cli.github.com/).
 
-Run this command in the terminal
+> Run this command in the terminal
 
 ```
     gh auth login
