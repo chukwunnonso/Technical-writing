@@ -1,4 +1,5 @@
 # Introduction to GitHub
+In this present day and age, no developer should have to lose their project or source codes or struggle with working alongside others.
 
 ## Table of content
 - Introduction 
@@ -11,17 +12,20 @@
 - GitHub Desktop vs. Github CLI
   
 ## Introduction
-The idea of working on fascinating projects is usually enjoyable. However, having answers to "How can we secure the project history and keep track of our progress?" will keep us on the safe side. Let us answer these questions using Git and GitHub.
 
+The idea of working on fascinating projects is usually enjoyable. However, we need to know how we can secure the project and keep track of progress and even work alongside others.
+
+You may have been told "make sure you have a backup". Well, before the invent of GitHub, developers used punch cards and even USB flash drives to backup projects. Aside the burden of updating the project after making changes and ensuring the device is well secured, collaborating with others was hell. GitHub on the other hand takes your files and stores it on a secured server where changes can be easily updated and also enhances collaboration.
 
 ## What is GitHub?
 
 The words "Git" and "Hub" makeup GitHub. Let's briefly discuss Git before moving on to what GitHub is.
 
-### What is Git?
- Git is a distributed version control system (DVCS), which means that your local machine will have an exact mirror copy of the full source code and history. Globally, Git is the most adopted version control system in terms of popularity. We could credit this widespread adoption to its compatibility on Windows, MacOS, ond Linux operating systems. Below is a walkthrough of the installation process using Windows Operating System. Go [here](https://git-scm.com/.) to download Git to your machine.
+
+ **Git** is a distributed version control system (DVCS), which means that your local machine will have an exact mirror copy of the full source code and history. Globally, Git is the most adopted version control system in terms of popularity. We could credit this widespread adoption to its compatibility on Windows, MacOS, ond Linux operating systems. Below is a walkthrough of the installation process using Windows Operating System. Go [here](https://git-scm.com/.) to download Git to your machine.
 
 ![Image](images\git_download.png)
+<br><br>
 ![Image](images\github_sign_up.png)
 
 
@@ -30,20 +34,7 @@ GitHub is a platform for hosting Git repositories on a distant server or the int
 
 > Just so you know, repository means folder. You may also hear some people  refer to repository as "repo" which is a short form for it.
 
-To use GitHub, you need to create an account or sign up by visiting the [GitHub website.](https://github.com/) 
-
-## Why GitHub
-
-| Features      | Why use GitHUB |
-| ----------- | ----------- |
-| 1. Security      | With GitHub, securing your projects with top level security only takes a few seconds.       |
-| 2. Ease of Use      | GitHub is suitable for seasoned developer, early career programmers,  designers and writers.       |
-| 3. Socials   | GitHub is built with the idea that people are social beings, making it simple for you to connect and cooperate with other developers from across the world and growing your network.        |
-|4.  Productivity    |  GitHub simplifies working independently on a personal project as well as with a team for a collaborative project.       |
-|5.  Open Source Contribution      | Similar to humanitarian services, improving open source project is easy using GitHub.         |
-| 6. Education      |  GitHub is host to millions of free repository you can utilize when learning new concepts or preparing for interviews.        |
-| 7. Personal  Development    |  GitHub education offers student access to frontendmasters, a platform where they can gain on demand tech skills.        |
-
+To use GitHub, you need to sign up on the [website.](https://github.com/)
 
 ## Git vs Github
 
@@ -57,11 +48,28 @@ To use GitHub, you need to create an account or sign up by visiting the [GitHub 
 | Git is written in C programming language      | GitHub  is developed with Ruby on Rails       |
 | Git was first launched in 2005.      | GitHub was launched in 2008.      |
 
+<br>
+
+## Why GitHub
+
+| Features      | Why use GitHUB |
+| ----------- | ----------- |
+| 1. Security      | With GitHub, securing your projects with top level security only takes a few seconds.       |
+| 2. Ease of Use      | GitHub is suitable for seasoned developer, early career programmers,  designers and writers.       |
+| 3. Socials   | GitHub is built with the idea that people are social beings, making it simple for you to connect and cooperate with other developers from across the world and growing your network.        |
+|4.  Productivity    |  GitHub simplifies working independently on a personal project as well as with a team for a collaborative project.       |
+|5.  Open Source Contribution      | Similar to humanitarian services, improving open source project is easy using GitHub.         |
+| 6. Education      |  GitHub is host to millions of free repository you can utilize when learning new concepts or preparing for interviews.        |
+| 7. Personal  Development    |  GitHub education offers student access to frontendmasters, a platform where they can gain on demand tech skills.        |
+| 8. Portfolio    |  GitHub is used to showcase personal projects and contributions and can be used as portfolio when applying for jobs and grants   |
 
 
-### Clone (How to clone)
+
+### Clone 
 
 Git clone is used to copy a repository that already exists on the cloud into your machine. It provides all the files and history of the codebase. Cloning can be done using HTTPS or SSH code. Let clone a repository using HTTPS. 
+
+#### How to clone
 
 Assuming you found the project you want to clone to your desktop, 
 
@@ -96,9 +104,12 @@ Assuming you found the project you want to clone to your desktop,
 
 <br>
 
-### Commit (How to commit)
+### Commit 
 
 Git commit is always preceded by a very popular command known as the git add. Imagine the git add as a command used to bring all the files we want to take a snapshot of to the stage. The git commit is the command that takes the snapshot. Only staged files can be committed. Committed files represent a safe version of your project. This files will only be changed when you instruct Git to do so.
+
+
+#### How to commit
 
 ```
     git commit -m "This is how to commit"
@@ -112,11 +123,12 @@ Git commit is always preceded by a very popular command known as the git add. Im
  git commit --amend “This is the correct message”
 ```
 
-### Pull request (How to do a pull request):
+### Pull request 
 
 Collaboration is one key features of GitHub. Effective team work necessitates communication. When you pull request, the project owner examines the changes and either accept or reject the change. Pull request helps with efficient communication. You can perform pull requests via GitHub, GitHub Desktop, GITHUB CLI, etc. After submitting a pull request, a page comparing the two branches will show up so you can view the differences. 
 
- *Here is how you can pull request.*
+ #### How to do a pull request
+
 
 <br>
 
@@ -127,7 +139,7 @@ Collaboration is one key features of GitHub. Effective team work necessitates co
 *Open the terminal in VS Code using* 
 
 ```
-    cmd + shift + ~
+    cmd + ~
 ```
 
 ```
@@ -182,6 +194,8 @@ Install [GitHub CLI](https://cli.github.com/).
 
 
 
+## Conclusion
+We have seen that with Github our project is safe and can be accessed from anywhere easily. Although learning this might be intimidating but with the basic commands and features we have covered, you should be able to utilise Git and GitHub for track projects you are working on and also improving the projects of others. Thank you for reading and keep building!
 
-With what we have covered, you should be able to work with both Git and GitHub and keep track of the projects you are working on without been afraid of losing any of your files and projects. Keep building!
 
+### References
