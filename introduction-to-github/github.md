@@ -7,8 +7,8 @@ You don't have to lose your projects or struggle with collaborating anymore.
     - Why GitHub
     - Git vs. GitHub
     - Commit (how to do a commit)
-    - Clone (how to do cloning)
-    - Pull request (how to do a pull request
+    - Clone (how to clone)
+    - Pull Request (How to make a pull request)
     - GitHub Desktop vs. Github CLI
   
 ## Introduction
@@ -153,11 +153,11 @@ Step four and five above is done as shown below.
 
 
 
-### How to Make a Pull Request 
+### Pull Request 
 
 Collaboration is one key features of GitHub. Effective team work necessitates communication. When you pull request, the project owner examines the changes and either accept or reject the change. Pull request helps with efficient communication. You can perform pull requests via GitHub, GitHub Desktop, GITHUB CLI, etc. After submitting a pull request, a page comparing the two branches will show up so you can view the differences. 
 
- * How to do a pull request
+ * How to make a pull request
 
      * Open the cloned folder in your favorite Integrated Development Environment for example Visual Studio Code  using ` cmd + ~`.
 
