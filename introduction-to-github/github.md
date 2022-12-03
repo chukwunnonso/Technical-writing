@@ -6,9 +6,9 @@ You don't have to lose your projects or struggle with collaborating anymore.
     - What is GitHub
     - Why GitHub
     - Git vs. GitHub
-    - Commit (Show how to do a commit)
-    - Clone (Show how to do cloning)
-    - Pull request (Show how to do a pull request
+    - Commit (how to do a commit)
+    - Clone (how to do cloning)
+    - Pull request (how to do a pull request
     - GitHub Desktop vs. Github CLI
   
 ## Introduction
@@ -143,13 +143,13 @@ Step four and five above is done as shown below.
  
 * Summary of some advanced commands
 
-    * Git push: On Git, everything we do remains local. To update the remote repository, we employ git push. The git push command unifies both local and remote repositories.
+    * Git push: On Git, everything we do remains local. To update the remote repository, we employ git push. The `git push`  unifies both local and remote repositories.
 
-   * git fetch: Changes are downloaded to the local repository using git fetch from the remote repository. Git fetch allows us to compare local and remote repositories side by side.
+   * Git fetch: Changes are downloaded to the local repository using `git fetch` from the remote repository. Git fetch allows us to compare local and remote repositories side by side.
  
-   * Git merge: The git merge command syncs the local repository with the fetched remote repository.
+   * Git merge: The `git merge` command syncs the local repository with the fetched remote repository.
 
-   * Git pull: The commands git fetch and git merge are executed simultaneously by git pull. The remote repository is used to automatically replace the local repository.<br> <br><br>
+   * Git pull: The commands `git fetch` and `git merge` are executed simultaneously by `git pull`. The remote repository is used to automatically replace the local repository.<br> <br><br>
 
 
 
@@ -202,7 +202,7 @@ Go back to [GitHub](https://github.com/). If you followed the steps,  you should
 
 
 ### GitHub Desktop
-GitHub Desktop, in a nutshell, makes it simpler to work with both local and cloud-hosted repositories and simplifies your work. Eliminating any potential roadblocks and Increasing your productivity are the two main objectives of GitHub desktop.
+GitHub Desktop, in a nutshell, makes it simpler to work with both local and cloud-hosted repositories and simplifies your work. Eliminating any potential roadblocks and Increasing your productivity are the two main objectives of `GitHub desktop`.
 
 Visit [this link](https://desktop.github.com/) to get it installed on your local computer.
 
@@ -213,7 +213,7 @@ Visit [this link](https://desktop.github.com/) to get it installed on your local
 
 GitHub CLI stands for GitHub Command Line Interface. It connects GitHub to your terminal without switching applications. 
 
-Think of the GitHub CLI when you consider ease. GitHub CLI makes you accustomed to working with the terminal - a crucial skill. 
+Think of the `GitHub CLI` when you consider ease. GitHub CLI makes you accustomed to working with the terminal - a crucial skill. 
 
 
 Install [GitHub CLI](https://cli.github.com/).
