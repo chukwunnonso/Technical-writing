@@ -15,23 +15,28 @@ You don't have to lose your projects or struggle with collaborating anymore.
 
 Working on fascinating projects is usually enjoyable. However, we need to secure the project, track progress and even work alongside others.
 
-You may have been told "make sure you have a backup". Well, before the invent of GitHub, developers used punch cards and even USB flash drives for backups. Aside the burden of updating the project after making changes and ensuring the device is well secured, collaboration was hell. Lets discuss how to utilize GitHub while working on our project or as part of a team.
+You may have been told "make sure you have a backup". Well, before the invent of GitHub, developers used punch cards and even USB flash drives for backups. Aside the burden of updating the project after making changes and ensuring the device is well secured, collaboration was hell. Let's discuss how to maximize GitHub while working on our project or as part of a team.
 
 ## What is GitHub?
 
-The words "Git" and "Hub" makeup GitHub. What then is Git?
 
 
- **Git** is a distributed version control system (DVCS), meaning your local machine gets a mirror copy of the source code and history. Globally, Git is the most adopted version control system in terms of popularity. We could credit this widespread adoption to its compatibility on Windows, MacOS, ond Linux Operating System. Go [here](https://git-scm.com/.) to download Git. <br><br><br>
+ **Git** is a distributed version control system (DVCS), meaning your local machine gets a mirror copy of the source code and history. Globally, Git is the most adopted version control system in terms of popularity. We could credit this widespread adoption to its compatibility on Windows, MacOS, and Linux Operating System. Repositories on Git are local repositories and can be lost.
+ 
+Download [Git](https://git-scm.com/.) here. <br><br><br>
 
 ![Image](git-home.png)
 
 
-GitHub is a platform for hosting ` Git ` repositories on a distant server on the internet. GitHub simplifies connecting with developers across the globe. It offers you the chance to improve your skills by contributing to open source projects of others.  Open source are projects that you can contribute to and modify. Git is very essential to GitHub.
+GitHub is a platform for hosting ` Git ` repositories on a distant server on the internet. Repositories on GitHub are safe and can be accessed from anywhere by you if it is private or seen by everyone on the internet if it is a public repository. Repositories on GitHub are called remote repositories.
+
+Connecting with developers across the globe is straightforward using GitHub and you can improve your skills by contributing to  [open source](https://opensource.com/resources/what-open-source) projects. Git is very essential to GitHub.
+
+
 
 *Repository or Repo as some may call it means folder.* 
 
-To use GitHub, you need to sign up on [GitHub](https://github.com/)
+Sign up with [GitHub](https://github.com/) to get started.
 
 
 ![Image](github-signup.png)<br><br><br>
@@ -47,21 +52,21 @@ To use GitHub, you need to sign up on [GitHub](https://github.com/)
 | Git was created by Linus Torvalds.      | GitHub  was collectively created by Chris Wanstrath, P. J. Hyett, Tom Preston-Werner, and Scott Chacon       |
 | Git is written in C programming language      | GitHub  is developed with Ruby on Rails       |
 | Git was first launched in 2005.      | GitHub was launched in 2008.      |
+| Local repositories on Git is seen by only you      | Remote repository on GitHub can be pivate or public.       |
 
 <br>
 
-## Why GitHub
+## Why GitHub?
 
 | Features      | Why use GitHUB |
 | ----------- | ----------- |
 | 1. Security      | With GitHub, securing your projects with top level security only takes a few seconds.       |
-| 2. Ease of Use      | GitHub is suitable for seasoned developer, early career programmers,  designers and writers.       |
-| 3. Socials   | GitHub is built with the idea that people are social beings. You can easily connect and collaborate with other developers from across the globe.        |
-|4.  Productivity    |  GitHub simplifies working independently on a personal project and with a team for a collaborative project.       |
-|5.  Open Source Contribution      | Improving open source project is easy using GitHub.         |
-| 6. Education      |  GitHub hosts millions of free repository you can utilize when learning new concepts or preparing for interviews.        |
-| 7. Personal  Development    |  With [GitHub education](https://education.github.com/benefits?type=student/), you can access quality resources and gain on demand skills.        |
-| 8. Portfolio    |  GitHub showcases personal projects and can be used as portfolio when applying for jobs and grants.   |
+| 2. Versatility      | GitHub is suitable for seasoned developer, early career programmers,  designers and writers.       |
+| 3. Socials   | You can easily connect with other developers from across the globe using GitHub.        |
+|4.Productivity    |  GitHub simplifies working independently on a personal project and with a team for a collaborative project. |
+| 5. [open source](https://opensource.com/resources/) |  GitHub hosts millions of free repository you can improve upon and learn new concepts from.  |
+| 6. Education    |  With [GitHub education](https://education.github.com/benefits?type=student/), you can access free quality resources and gain on demand skills.        |
+| 7. Portfolio    |  GitHub showcases personal projects and can be used as portfolio when applying for jobs and grants.   |
 
 
 <br> <br>
@@ -88,7 +93,7 @@ To use GitHub, you need to sign up on [GitHub](https://github.com/)
 
 `Git clone` copies a repository that already exists into your machine. It provides all the files and history of the codebase. Cloning can be done using `HTTPS` or `SSH code`. Together, lets clone a repository using HTTPS. 
 
-* How to clone
+ *How do we clone?*
 
     When you find the project you want to clone... 
 
@@ -111,19 +116,16 @@ Step four and five above is done as shown below.
 
 
 
-
- <br>*Changes you make to projects will be effected only if you have write permissions to the repository. Or if you make a pull request that was accepted.*
-
 <br>
 
-### Commit 
+### What is Commit? 
 
 `Git commit` is always preceded by `git add`. `Git commit`  takes  snapshots. Changes made to a file are not saved by `git status` or `git add`. To save changes, use `git commit`. Committed files represent a safe version of your project. This files will only be modified when you instruct Git to do so.Without `git commit`, the remote repository cannot be updated . Only staged files can be committed. 
 
 
 
 
-* How to commit
+  *How do we commit?*
 
         git add [file name]
 
@@ -157,13 +159,16 @@ Step four and five above is done as shown below.
 
 Collaboration is one key features of GitHub. Effective team work necessitates communication. When you pull request, the project owner examines the changes and either accept or reject the change. Pull request helps with efficient communication. You can perform pull requests via GitHub, GitHub Desktop, GITHUB CLI, etc. After submitting a pull request, a page comparing the two branches will show up so you can view the differences. 
 
- * How to make a pull request
+  *How to make a pull request?*
 
-     * Open the cloned folder in your favorite Integrated Development Environment for example Visual Studio Code  using ` cmd + ~`.
+  Open the cloned repository in your favorite Integrated Development Environment for example Visual Studio Code  using:
+
+       cmd + ~
 
 <br>
 
-* 
+
+Creates a new branch called *update-readme-file* and switch to it using the command:    
 
 
 ```
@@ -171,7 +176,7 @@ git checkout -b “update-readme-file”
  ```   
     
     
-The command creates a new branch called *update-readme-file* and switches to it.  
+
 
 <br>    
  Make changes in your newly created branch. Then:
@@ -188,7 +193,7 @@ The command creates a new branch called *update-readme-file* and switches to it.
 ![Image](git-push-pr-cr.png) <br>
 
 
-Go back to [GitHub](https://github.com/). If you followed the steps,  you should find a green  button that says *compare and pull request* click it, give a descrription of the change you made then create pull request. 
+Go back to [GitHub](https://github.com/). If you followed the steps,  a green button should pop up with the message *compare and pull request* click it, give a descrription of the change you made then create pull request. 
 
 
 ![Image](compare-and-pr.png)
@@ -198,13 +203,15 @@ Go back to [GitHub](https://github.com/). If you followed the steps,  you should
 ![Image](pr-button-clicked.png)
 
 
+*If your pull request is accepted,  the change will be implemented.* <br><br>
+
 
 
 
 ### GitHub Desktop
-GitHub Desktop, in a nutshell, makes it simpler to work with both local and cloud-hosted repositories and simplifies your work. Eliminating any potential roadblocks and Increasing your productivity are the two main objectives of `GitHub desktop`.
+ In a nutshell, GitHub Desktop makes working with local and hosted repositories simple. `GitHub desktop` Eliminates any potential roadblocks and Increases your productivity.
 
-Visit [this link](https://desktop.github.com/) to get it installed on your local computer.
+Download [GitHub](https://desktop.github.com/) to your computer.
 
 ![Image](github_desktop.png)
 
@@ -239,11 +246,11 @@ Run this command in the terminal
 
 
 ## Conclusion
-We've seen that with Github, our project is safe and can be accessed from anywhere easily. Although learning this might be intimidating but with the basic commands and features we have covered,  utilizing Git and GitHub for project tracking and also improving the projects of others will be much easier. Thank you for reading and keep building!
-
+We've learned that using Github makes our project safe and accessible from any location with an internet connection. Using Git and GitHub for project tracking and improving the projects of others will be a lot easier with the fundamental commands and functionalities we have covered. As a developer, keep in mind that you must possess this expertise. I appreciate you reading, and keep building! 
 
 ### References
 
 * https://git-scm.com/docs
 * https://www.atlassian.com/git/tutorials/saving-changes/git-commit
 * https://docs.github.com/en
+* https://opensource.com/resources/what-open-source
