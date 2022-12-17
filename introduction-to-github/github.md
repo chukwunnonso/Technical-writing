@@ -25,7 +25,7 @@ You may have been told "make sure you have a backup". Well, before the invent of
 
 ## What is Git?
 
- *Git is a distributed version control system (DVCS)*, meaning your local machine gets a mirror copy of the source code and history. Globally, `Git` is the most adopted version control system in terms of popularity. We could credit this widespread adoption to its compatibility on Windows, MacOS, and Linux Operating System. Repositories on Git are local repositories and can be lost.
+ Git is a distributed version control system (DVCS), meaning your local machine gets a mirror copy of the source code and history. Globally, `Git` is the most adopted version control system in terms of popularity. We could credit this widespread adoption to its compatibility on Windows, MacOS, and Linux Operating System. Repositories on Git are local repositories and can be lost.
  
 Download [Git](https://git-scm.com/.) here. <br><br>
 
@@ -190,12 +190,13 @@ The --set-upstream will use remote as the upstream directory before pushing . An
 
 ![Image](push_with_upstream.png)<br><br>
 
+By using the command `git push --set-upstream`, you can initiate a new pull request so that your code can be reviewed to determine if it is what is required before merging.  
 
 ```
     git push <remote> --force
 ```
 
-The `git push origin –force` overwrites the remote content forcefully with the local repository we pushed. Ensure you use this command with caution. <br><br>
+The `git push origin --force` overwrites the remote content forcefully with the local repository we pushed. Ensure you use this command with caution because unlike `git push --set-upstream`,  the `git push --force` simply replaces everything with the local repository on the assumption that you absolutely want all the contents of the branch. <br><br>
 
  
 * Summary of some advanced commands
