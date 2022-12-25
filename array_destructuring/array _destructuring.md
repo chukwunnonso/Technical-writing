@@ -397,6 +397,5 @@ Here's another exmple demonstrating that we can use any name choice after the do
 
 ## In summary
 
-
-We've had a great time learning about the ES6 Array Destructuring. We've also covered some of the most important options that these features open up. Despite the few constraints, Array destructuring is very useful when manipulating Arrays. I appreciate you spending the time to learn from this piece.
+You have understood what array destructuring means. You have also seen some of the most vital options that the feature opens up. To enhance comprehension,  use it wherever necessary and make your work better. I appreciate you spending the time to learn from this piece.
 
