@@ -31,13 +31,9 @@ If you don't know these, still follow along and learn a thing or two.
 
 ---
 
-ECMAScript 6 (ES6) introduced us to the Destructure assignment which can be used on Arrays and Objects. 
+ECMAScript 6 (ES6) introduced us to the Destructure assignment.
 
-While Arrays store ordered items in a container known as a variable. Destructuring syntax unpacks and assigns a distinct variable to each item.  We'll look into a few array-specific implementations of the destructuring syntax.
-
-Comparing Array literal and the Destructuring, we can see quite some similarities.
-
-
+While Arrays store ordered items in a container known as a variable, destructuring syntax unpacks and assigns a distinct variable to each item.  We'll look into a few array-specific implementations of the destructuring syntax. When comparing Array literal and Destructuring, we can see quite some similarities.
 
  For instance:
 
@@ -47,7 +43,7 @@ Comparing Array literal and the Destructuring, we can see quite some similaritie
     const studentNames = [ ‘james’, ‘John’, ‘Jamie’]
 ```
 
-> On the left we have `studentNames` as the variable name and an array on the right.
+- On the left we have `studentNames` as the variable name and an `array` on the right.
 
 
 `Destructuring`
@@ -57,14 +53,12 @@ Comparing Array literal and the Destructuring, we can see quite some similaritie
 
     let [a, b, c, d] = designation
 ```
-> We have array of variables `[a, b, c, d]` on the left and `designation` to the right which is the variable that holds the array. 
+- We have array of variables `[a, b, c, d]` on the left and `designation` to the right which is the `variable` that holds the array. 
 
 ## Why Destructure Arrays?
 
-Using destructuring syntax is convenient for treating array components individually rather than collectively.
-
-Excessive repetition is typically regarded as bad practice in programming. Before ES6 we retrieve elements by following these steps:
-
+Using destructuring syntax is convenient for handling array components individually rather than collectively.
+In programming, excessive repetition is considered bad practice. Before ES6, we retrieve elements by following these steps:
 
 ```
         let mouseNames = [
@@ -107,32 +101,29 @@ You can see that the code is not DRY(Do Not Repeat Yourself) and doesn't read ve
     let [firstMouse, secondMouse, thirdMouse, fourthMouse, fifthMouse,  sixthMouse] = mouseNames
 
 ```
-### What can you achieve?
-You can manipulate your array with the help of the destructuring syntax using fewer lines of code. We'll be looking at a few of possibilities below.
 
+- Still working on the variable `mouseNames` with six items within the array.
+- We created another `array` with six variables. Each array item gets assigned to one unique variable. It is the summary of what destructuring is all about.  
+### What can you achieve?
+You can manipulate your array with the help of the destructuring syntax. It requires using fewer lines of code. We'll be looking at a few possibilities we can have with this syntax.
 #### Can you Swap Variable?
 
-Before ES6, a temporary value was used when swapping. The code below  illustrates how it was done.
+A temporary value was used before ES6 when swapping. The code below illustrates how you can do it.
 
 ```
         let players = ["Tilde", "Jordan", "Jaden", "Beloved"]
 
         let referees = ["Michael", "Sail", "Pathfinder", "Strides"]
 
-        // Declare a variable without initializing it.
-
         let tempVal;
-        //  then swap
-
-        // Assign "players" to the declared variable
 
         tempVal = players;
 
-        // Set "players" to "referees"
+        
 
         players = referees
 
-        // Finally initialize "referees" to the "tempval"
+        
 
         referees = tempVal
 
@@ -143,9 +134,12 @@ Before ES6, a temporary value was used when swapping. The code below  illustrate
 
 
 ```
-
-
-
+-  **Step 1:** You have two arrays `players` and `referees`
+-  **Step 2:** Declare a variable `tempVal` without initializing. It is your temporary variable.
+-  **Step 3:** Assign `players` to `tempVal`
+-  **Step 4:** Set `players` to `referees`
+-  **Step 5:** Finally initialize `referees` to the `tempval`
+  
 The Destructure syntax simplifies swapping of several variables or individual components of an array.
 
 ```
@@ -156,7 +150,7 @@ The Destructure syntax simplifies swapping of several variables or individual co
             console.log(`${student} ${teacher}`); //Benjamin Taylor
 ```
 
-
+- What we have above is very straightforward. Using a square bracket, interchange the position of the variables.
 
 <br> <b>
 
@@ -164,7 +158,7 @@ The Destructure syntax simplifies swapping of several variables or individual co
 
 #### Destructuring with more variables?
 
-The result of having more variables than the elements in an array is `undefined` and is comparable to declaring a variable without assigning value.
+Having more variables than the elements in an array will give `undefined`. It is comparable to declaring a variable without assigning a value. 
 
 ```
         let moreVariables = [1000, 2000, 3000, 4000]
@@ -180,11 +174,13 @@ The result of having more variables than the elements in an array is `undefined`
         console.log(f) // undefined
 
 ```
-> The `moreVariables` has four items. The destructuring syntax has six variables `[a, b, c, d, e, f]`. As you can see, because no item is initialized to the  last two variables `e,f`, you will get `undefine`.
+- The `moreVariables` has four items. 
+- The destructuring syntax has six variables `[a, b, c, d, e, f]`. 
+- As you can see, because no item is initialized to the last two variables `e,f`, you will get `undefine`.
 
 #### Assign Default values?
 
-Recall that variables are on the left side of the Destructuring syntax. Any variable without a corresponding array item returns as `undefined`. While Destructuring, the "=" operator does the trick for us. With this assignment, we can use the "default" value.
+Recall that variables are on the left side of the `Destructuring` syntax. Any variable without a corresponding array item returns as `undefined`. While Destructuring, the `=` operator does the trick for us. With this assignment, we can use the `default` value.
 
 
 ```
@@ -207,9 +203,12 @@ Recall that variables are on the left side of the Destructuring syntax. Any vari
     console.log(fourth_city) // we have a default of "London"
 
 ```
-The `popularCities` array above has three cities. On the syntax there are four variables with the fourth variable having default value asigned to it. Instead of `undefined` , it outputs `London`. Amazing!
+- The `popularCities` has three cities. 
+- On the `syntax` there are four variables with the fourth variable having a `default` value assigned to it.
+- Instead of `undefined` , it outputs `London`. Amazing!
     
-The prompt keyword can also assign the default. I'll be demonstrating this shortly.
+
+The `prompt()`  method can also assign the default. I'll be demonstrating this shortly.
 
 ```
         let sports = [
@@ -222,13 +221,12 @@ The prompt keyword can also assign the default. I'll be demonstrating this short
 
         console.log(sportFour)
 ```
-> `sportFour` will prompt you to enter a value which wwill serve as the `default`.
+- The `method` on `sportFour` will provide a dialogue box for you to make an input that serves as the `default`.
 
 
 #### Selectively return values?
 
-We can ignore some elements using trailing commas instead of variable names. Each trailing comma excludes the array item that should occupy that position. This method is better when dealing with a small array. Yet, when the Array of items increases,  using commas becomes more difficult. Using this approach happens to be one of the limitations of Destructuring  Arrays.
-
+ We can ignore some elements using `trailing commas`. Each comma excludes the array item that should occupy that position. This approach is better when dealing with a small array.  
 
 ```
     let sports = [
@@ -249,14 +247,13 @@ We can ignore some elements using trailing commas instead of variable names. Eac
 
 ```
 
-> Aside the first comma after a, there are four succeeding trailing commas, each represent an array item.
-
+- Aside from the comma after `a`, there are four succeeding `trailing commas`, each excluding an array item.
 ```
         function ignoreFewValues() {
             return [300,600,900, 1200]
         }
         
-        const [a, ,,d] = ignoreFewValues();
+        const [a,,,d] = ignoreFewValues();
  
             
         console.log(a) // 300
@@ -264,11 +261,12 @@ We can ignore some elements using trailing commas instead of variable names. Eac
 
 ```
 
-> Note, you are returning an array. Also, invoke  the function like this `ignoreFewValues()` on the right. If you do not call the funcion you get an error.
-
+- This is similar to the example above.
+- Here, you are returning an array with a `square` bracket. 
+- Invoke  the function like this `ignoreFewValues()` on the right. If you don't, you will get an error.
 #### Dealing with nested Arrays?
 
-Nested arrays are not left out. You can use the syntax to unpack the array items.
+Nested arrays are not left out. You can use the syntax to unpack the array items no matter how deeply nested they are.
 
 ```
     let musicalInstruments = [
@@ -289,15 +287,16 @@ console.log(instrument1)
 console.log(string2)
 
 ```
-> The array `musicalInstruments` has another array within it.
+- The array `musicalInstruments` has another array within it.
 
-> Take not of he `trailing commas` separating the nested arrays. Also the nested variables are separated with a comma. Without these `trailing commas`, you will get an error message that looks like this "undefined is not iterable (cannot read property Symbol(Symbol.iterator))". 
+- Take note of the `trailing commas` separating the nested arrays. 
+- The nested variables are separated with a comma. 
+- Without these `commas`, you will be thrown this error message "undefined is not iterable (cannot read property Symbol(Symbol.iterator))". 
 
 <br> <br>
 
 #### A better way to ignore?
-Having seen that counting `trailing commas` could be very challwnging as the array size increases. It now neccessitates that we use an alternative method to access items selectively. In JavaScript, everything, including an array, is an object. Using the following method, you can only access the first and last elements:
-
+Counting commas is challenging. But then, we can take advantage of the fact that in JavaScript, everything, including an array, is an object. Using this, you can access only the required items.
 ```
     let groceries = [
         "tomatoes", 
