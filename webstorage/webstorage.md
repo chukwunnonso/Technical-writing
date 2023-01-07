@@ -201,6 +201,12 @@ To get the number of all items in the local storage section of the browser, use 
   
 ```
 
+![image](length_ls.png)
+
+![image](length_console.png)
+
+The number `2` is displayed on the console. That is the length of the local storage.
+
 ### Local storage data
 The browser window stores local storage data. This value is received in the form of key-value pairs. It is akin to the JavaScript Object and the JavaScript Object Notation(JSON) syntax. Strings are the data types supported by local storage. Storage capacity varies across browsers. Opera and Safari browsers stores 5 megabytes of data. Internet Explorer, Chrome, and Firefox can receive up to 10 megabytes.
 
@@ -221,6 +227,8 @@ The browser window stores local storage data. This value is received in the form
 ```
 When an object stored directly into the local storage, it shows `[object object]`. Which obviously isn't what anyone would want.
 
+![image](set_object_no_string.png)
+
 To successfully place an object into the local storage, you need to turn it into a string using the JSON.stringify method.
 
 
@@ -236,7 +244,7 @@ To successfully place an object into the local storage, you need to turn it into
   
   console.log(localStorage.getItem("staffData"))
 ```
-
+![image](set_object_stringify.png)
 
 After stringifying, you now have a JSON string. To convert the JSON string back to an object, we will use the JSON.parse method. A better way to picture JSON.parse is as a data exchanger. 
 
@@ -246,11 +254,10 @@ After stringifying, you now have a JSON string. To convert the JSON string back 
   console.log(JSON.parse(staffDataUpdated))
 ```
 
+![image](parse_object.png)
+
 
 ### The Data Model
-Local storage adopts the [Associative Array Data model](https://en.wikipedia.org/wiki/Associative_array). In this key/value pair model, each key has to be unique and cannot be used more than once. For every repeated key, the succeeding key is used to replace the preceeding key. Take for example:
-
-
 Local storage adopts the [Associative Array Data model](https://en.wikipedia.org/wiki/Associative_array). In this key/value pair model, each key has to be unique and cannot be used more than once. For every repeated key, the succeeding key replaces the preceeding key. Consider this as an illustration:
 
 ```
@@ -278,6 +285,7 @@ Local storage adopts the [Associative Array Data model](https://en.wikipedia.org
 
 Because we used the `position` for all three entries, which violates the Associative Data Model, the position will be used for only the last entries.
 
+![image](data_model.png)
 
 ### Why use local storage?
 1. Super easy and concise syntax.
