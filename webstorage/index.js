@@ -20,6 +20,8 @@
 
 
 //remove
-localStorage.setItem('version', 12);
+// localStorage.setItem('version', 12);
 
-localStorage.removeItem('version')
+// localStorage.removeItem('version')
+
+localStorage.setItem(2, "His second name is John")

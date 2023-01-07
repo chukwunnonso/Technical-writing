@@ -34,9 +34,14 @@ This storage clears all data at the end of every session or closing of the windo
 ### Local Storage
 Local storage stores persistent key-value pairs on your browser. Closing the window or browser does not remove the data in the storage. Local storage is per origin. To set or get items from both local storage and session storage, we use a type of JavaScript API. Before discussing these API methods, let's understand the same origin policy.
 
+![Image](access_two.png)
+
+![Image](access_2_ls.png)
+
+
 ### Same Origin Policy (SOP)
 
-When you log in to www.bankoftherich.com, your user authentication is stored. If you visit another website www.malicious.com. By default the browser allows the malicious website to make and get requests to and from your bank site. The malicious site does it by reusing the authentication. The malicious site is empowered to do everything possible on the bank site. Some of these activities could be criminal such as initiating new transactions. 
+When you log in to 'http://www.bankoftherich.com', your user authentication is stored. If you visit another website 'http://www.malicious.com'. By default the browser allows the malicious website to make and get requests to and from your bank site. The malicious site does it by reusing the authentication. The malicious site is empowered to do everything possible on the bank site. Some of these activities could be criminal such as initiating new transactions. 
 
 The same origin policy as a security feature prevents the above scenario. Websites of the same origin have read and write access. But access is denied websites with different origins. Origin means the same `URL scheme(protocol)`, `host(domain)`, and `port number`. The protocol for web applications can either be `HTTP` on `port 80` or the `HTTPS` on `port 443`. During user authentication with HTTP cookies, `SOP` ensures no sensitive credentials leaks. SOP restricts only script files. Scripts loaded from the same origin have access to all the data. Alternately, Cascading Style Sheets(CSS) and images resource are visible. 
 
@@ -69,6 +74,9 @@ Browsers declare the global objects  on the window.
 ```
 Type this short code inside the console, It should give you all the items inside the local storage and the length of the storage.
 
+![Image](window_localstorage.png)
+
+Window.localStorage outputs all the items in the local storage and the length.
 
 - Writing to local storage
 
@@ -82,10 +90,12 @@ The method `localStorage.setItem` allows you to write to the localStorage. You w
 ```
 
 ```
-localStorage.setItem("score", 3)
+localStorage.setItem(2, "His second name is John")
 
 ```
-If you check the storage, you should see a key `score` with value of `3`
+If you check the storage, you should see a key `2` with value of `His second name is John`
+
+![Image](ls-set.png)
 
 
 <br>
@@ -110,13 +120,17 @@ For you to read the local storage using the `key`, you need the `getItem` method
 ```
 when you check the console, you should see `12`
 
+![image](get_set.png)
 
-Trying to get an item that has not been set into the local storage will return `null`. For example, we didnt set any item with the key variety. Hence in the console, we have `null`
+![image](get_console.png)
+
+Trying to get an item that has not been set into the local storage will return `null`. For example, we didnt set any item with the key variety. Hence in the console, we have `null`.
+
 
 ```
   console.log(localStorage.getItem("variety"))
 ```
-
+![image](console_null.png)
 
 - Removing an item from the local storage.
 
@@ -128,9 +142,15 @@ To remove an item from the local storage window, all you need to do is have the 
 ```
 
 ```
-localStorage.removeItem('version')
+  localStorage.setItem('version', 12);
+```
+![image](remove_item_ls.png)
 
 ```
+    localStorage.removeItem('version')
+
+```
+![image](removed.png)
 
 - Clear Storage
 
@@ -172,7 +192,13 @@ To get the number of all items in the local storage section of the browser, use 
 ```
 
 ```
+
+  localStorage.setItem("friendsName", "Micah")
+
+  localStorage.setItem("studentsScore", 67)
+
   console.log(localStorage.length)
+  
 ```
 
 ### Local storage data
@@ -183,7 +209,7 @@ The browser window stores local storage data. This value is received in the form
 
 ```
    const staffData = {
-     name: "fredrik Clay",
+     name: "Fredrik Clay",
      designation: "Software Engineer",
      Age: 40,
      Hobby: "Golfing",
@@ -200,7 +226,7 @@ To successfully place an object into the local storage, you need to turn it into
 
 ```
     const staffData = {
-    name: "fredrik Clay",
+    name: "Fredrik Clay",
     designation: "Software Engineer",
     Age: 40,
     Hobby: "Golfing",
@@ -228,11 +254,12 @@ Local storage adopts the [Associative Array Data model](https://en.wikipedia.org
 Local storage adopts the [Associative Array Data model](https://en.wikipedia.org/wiki/Associative_array). In this key/value pair model, each key has to be unique and cannot be used more than once. For every repeated key, the succeeding key replaces the preceeding key. Consider this as an illustration:
 
 ```
-    console.log(localStorage.setItem("color", "green"))
 
-    console.log(localStorage.setItem("color", "blue"))
+    localStorage.setItem("color", "green")
 
-    console.log(localStorage.setItem("color", "red"))
+    localStorage.setItem("color", "blue")
+
+    localStorage.setItem("color", "red")
 
 ```
 
@@ -242,11 +269,11 @@ Local storage adopts the [Associative Array Data model](https://en.wikipedia.org
  Another example
 
 ```
-  console.log(localStorage.setItem("position", "SOftware Engineer"))
+  localStorage.setItem("position", "Software Engineer")
 
-  console.log(localStorage.setItem("position", "Senior Engineer"))
+  localStorage.setItem("position", "Senior Engineer")
 
-  console.log(localStorage.setItem("position", "Chief Technical Officer"))
+  localStorage.setItem("position", "Chief Technical Officer")
 ```
 
 Because we used the `position` for all three entries, which violates the Associative Data Model, the position will be used for only the last entries.
