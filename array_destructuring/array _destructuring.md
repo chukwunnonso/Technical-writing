@@ -1,7 +1,7 @@
 
 # Array Destructuring: what do you need to know?
 
-Extract and manipulate your array items as you deem fit!
+Extract and manipulate the items in your array as you like!
 <br><br>
 
 ![Toaster](istockphoto-1433604582-612x612.jpg)<br>
@@ -398,4 +398,5 @@ Here's another exmple demonstrating that we can use any name choice after the do
 ## In summary
 
 You have understood what array destructuring means. You have also seen some of the most vital options that the feature opens up. To enhance comprehension,  use it wherever necessary and make your work better. I appreciate you spending the time to learn from this piece.
+
 
