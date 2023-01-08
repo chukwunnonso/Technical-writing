@@ -288,16 +288,15 @@ Because we used the `position` for all three entries, which violates the Associa
 ![image](data_model.png)
 
 ### Why use local storage?
-1. Super easy and concise syntax.
-2. Larger storage capacity compared to cookies.
-3. Higher security level as data is not shared with server.
-4. For thesame domain, data can be accessed across different windows.
-5. Compatibilty across various browsers
-6. Stores persistent data that can be accessed offline.
-
+1. Simple and concise API.
+2. A bigger storage space than cookies.
+3. Data is not exchanged with the server hence a higher level of security.
+4. Windows with matching origin can access stored data.
+5. Local storage is supported by numerous browsers
+6. Saves permanent information that is accessible offline.
 ### Some limitations
-1. localStorage is not suitable for storing sensitive data.
-2. To use other data types on localStorage, you need to some JavaScript methods.
+1. Local storage is not suitable for storing sensitive data.
+2. To use other data types on localStorage, you need some JavaScript methods.
 3. Local storage can be used to track how often a user visits a page and also his activities which can be used for targeted avertisement.
   
 ### Wrapping up
