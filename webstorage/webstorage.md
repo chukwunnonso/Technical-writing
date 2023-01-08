@@ -5,14 +5,15 @@
 - What is localStorage
 - A quick explanation of session storage
 - The Same Origin Policy(SOP)
-- Local Storage Methods
+- Why use local storage?
+- Local Storage API Methods
   - get method
   - set method
-  - clear
-  - length 
+  - remove method
+  - clear method
+  - The length 
 - Local storage data 
 - The Data Model
-- Why use local storage?
 - Any limitations?
 - A simple project is possible
 - Wrapping up
@@ -32,7 +33,7 @@ The Session storage keeps data key-value pairs for one session. It is temporary 
 The session storage feature is considered both per instance and per origin. Per instance indicates that each window or tab stores its data. Per origin denotes that it abides by the same origin policy.
 This storage clears all data at the end of every session or closing of the window.
 ### Local Storage
-Local storage stores persistent key-value pairs on your browser. Closing the window or browser does not remove the data in the storage. Local storage is per origin. To set or get items from both local storage and session storage, we use a type of JavaScript API. Before discussing these API methods, let's understand the same origin policy.
+Local storage stores persistent key-value pairs on your browser. Closing the window or browser does not remove the data in the storage. Local storage is per origin. To set or get items from both local storage and session storage, we use a type of JavaScript API(Application Programming Interface). Before discussing these API methods, let's understand the same origin policy.
 
 ![Image](access_two.png)
 
@@ -65,8 +66,18 @@ These are the results when you compare this URL, "https://www.sameoriginpolicy.c
 |https://www.sameoriginpolicy.com/page2.html| Success |Thesame protocol, host and port|
 | https://www.sameoriginpolicy.com:8080/page.html | Failure|Different port|
 
+<br>
 
-### Local Storage Methods
+### Why Use Local Storage?
+1. Simple and concise API(Aplication Progamming Interface).
+2. A bigger storage space than cookies.
+3. Data is not exchanged with the server hence a higher level of security.
+4. Windows with matching origin can access stored data.
+5. Local storage is supported by numerous browsers
+6. Saves permanent information that is accessible offline.
+
+
+### Local Storage API Methods
 Browsers declare the global objects  on the window.
 
 ```
@@ -207,7 +218,7 @@ To get the number of all items in the local storage section of the browser, use 
 
 The number `2` is displayed on the console. That is the length of the local storage.
 
-### Local storage data
+### Local Storage Data
 The browser window stores local storage data. This value is received in the form of key-value pairs. It is akin to the JavaScript Object and the JavaScript Object Notation(JSON) syntax. Strings are the data types supported by local storage. Storage capacity varies across browsers. Opera and Safari browsers stores 5 megabytes of data. Internet Explorer, Chrome, and Firefox can receive up to 10 megabytes.
 
 
@@ -287,17 +298,10 @@ Because we used the `position` for all three entries, which violates the Associa
 
 ![image](data_model.png)
 
-### Why use local storage?
-1. Simple and concise API.
-2. A bigger storage space than cookies.
-3. Data is not exchanged with the server hence a higher level of security.
-4. Windows with matching origin can access stored data.
-5. Local storage is supported by numerous browsers
-6. Saves permanent information that is accessible offline.
-### Some limitations
+### Some Limitations of Local Storage
 1. Local storage is not suitable for storing sensitive data.
 2. To use other data types on localStorage, you need some JavaScript methods.
 3. Local storage can be used to track how often a user visits a page and also his activities which can be used for targeted avertisement.
   
-### Wrapping up
+### Wrapping Up
 Now when building simple applications, you can use local storage. It will store data for offline and online access. But of course, local storage is not made for delicate data, so don't store them there. With the help of the simple Javascript APIs discussed, you can decide what to store and update at any time. While doing that, keep data models and types at the back of your mind to prevent replacing values. 
