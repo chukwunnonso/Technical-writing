@@ -1,0 +1,42 @@
+
+
+
+  {
+    "firstName": "Halina",
+    "lastName": "Woods",
+    "spouse": null,
+    "age": 24,
+    "designation": "software engineer",
+    "lovesCoding": true,
+    "country": "Nigeria",
+    "address": {
+    "streetAddress": "colorado close",
+    "city": "Abuja",
+    "state": "Abuja",
+    "postalCode": "10003-98374"
+    },
+    "phoneNumbers": [
+        {
+            "type": "home",
+            "number": "+2348101111223"
+        },
+
+        {
+            "type": "office",
+            "number": "6453 75644-46453"
+        }
+
+    ],
+
+    "hobbies": [
+        "shopping",
+        "reading",
+        "cooking"
+    ]
+  }
+
+
+ 
+
+
+  

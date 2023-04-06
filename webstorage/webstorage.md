@@ -1,39 +1,37 @@
-# JavaScript localStorage: The powerful client-side warehouse
+# JavaScript Local Storage: The powerful client-side warehouse
 
+![Image](Screenshot%20from%202023-01-09%2004-37-51-1.png)
 ## We'll cover the following
 
 - What is localStorage
 - A quick explanation of session storage
 - The Same Origin Policy(SOP)
 - Why use local storage?
+- Local Storage Data
 - Local Storage API Methods
-  - get method
-  - set method
-  - remove method
-  - clear method
-  - The length 
-- Local storage data 
+  - Set method
+  - Get method
+  - Remove method
+  - Clear method
+  - The length  
 - The Data Model
 - Any limitations?
-- A simple project is possible
 - Wrapping up
 
 
-If you use browsers, you should be familiar with the word 'cookies'. Cookies store key/value pairs on the client side. It then transfers this data to the server on every HTTPS request. 
+If you use browsers, you should be familiar with the word 'cookies'. Cookies store key-value pairs on the client side. It then transfers this data to the server on every HTTP request. 
 
-The data communicated with servers can cause security threats, especially on malicious sites. As a result of this, Netscape introduced a feature called Webstorge API. This API helps keep this threat at a minimal level. 
+The data communicated with servers can cause security threats, especially on malicious sites. As a result of this, Netscape introduced a feature called Webstorge API(Application Programming Interface). This API helps keep this threat at a minimal level. 
 
-Web storage is not a substitute for browser cookies. It is a web application security system for obtaining data from a user and storing it on the browser. These stored items are not shared with the server as cookie does. The web storage comprises the distinct localStorage and sessionStorage. 
-
-Come along as we explore the potent local storage.
+Web storage is not a substitute for browser cookies. It is a web application security system for obtaining data from a user and storing it on the browser. These stored items are not shared with the server as cookie does. The web storage comprises the distinct local storage and session storage. 
 
 ### Session Storage 
-The Session storage keeps data key-value pairs for one session. It is temporary storage and is suitable for one-time transactions on web pages.
+The Session storage keeps key-value pairs data for one session. It is a temporary storage and is suitable for one-time transactions on web pages.
 
-The session storage feature is considered both per instance and per origin. Per instance indicates that each window or tab stores its data. Per origin denotes that it abides by the same origin policy.
+The session storage feature is considered both per instance and per origin. Per instance indicates that each window or tab stores its data. Per origin denotes that it obeys the same origin policy.
 This storage clears all data at the end of every session or closing of the window.
 ### Local Storage
-Local storage stores persistent key-value pairs on your browser. Closing the window or browser does not remove the data in the storage. Local storage is per origin. To set or get items from both local storage and session storage, we use a type of JavaScript API(Application Programming Interface). Before discussing these API methods, let's understand the same origin policy.
+Local storage stores persistent key-value pairs on your browser. Closing the window or browser does not remove the data in the storage. Local storage is per origin. To set or get items from both local storage and session storage, we use a type of JavaScript API. These images illustrates how to access the local storage.
 
 ![Image](access_two.png)
 
@@ -42,9 +40,9 @@ Local storage stores persistent key-value pairs on your browser. Closing the win
 
 ### Same Origin Policy (SOP)
 
-When you log in to 'http://www.bankoftherich.com', your user authentication is stored. If you visit another website 'http://www.malicious.com'. By default the browser allows the malicious website to make and get requests to and from your bank site. The malicious site does it by reusing the authentication. The malicious site is empowered to do everything possible on the bank site. Some of these activities could be criminal such as initiating new transactions. 
+When you log in to 'http://www.bankoftherich.com', your user authentication is stored. If you visit another website 'http://www.malicious.com'. By default the browser allows the malicious website to make and get requests to and from your bank site. The malicious site does it by reusing the authentication and is empowered to do everything possible on the bank site. Some of these activities could be criminal such as initiating new transactions. 
 
-The same origin policy as a security feature prevents the above scenario. Websites of the same origin have read and write access. But access is denied websites with different origins. Origin means the same `URL scheme(protocol)`, `host(domain)`, and `port number`. The protocol for web applications can either be `HTTP` on `port 80` or the `HTTPS` on `port 443`. During user authentication with HTTP cookies, `SOP` ensures no sensitive credentials leaks. SOP restricts only script files. Scripts loaded from the same origin have access to all the data. Alternately, Cascading Style Sheets(CSS) and images resource are visible. 
+The same origin policy as a security feature prevents the described scenario. Websites of the same origin have read and write access. But read access is denied websites of different origins. Origin means the same `URL scheme(protocol)`, `host(domain)`, and `port number`. The protocol for web applications can either be `HTTP` on `port 80` or the `HTTPS` on `port 443`. During user authentication with HTTP cookies, `SOP` ensures no sensitive credentials leaks. SOP restricts only script files. Alternately, Cascading Style Sheets(CSS) and images resource are visible. 
 
 
 Given a website http://www.understandingsop.com/80
@@ -69,12 +67,61 @@ These are the results when you compare this URL, "https://www.sameoriginpolicy.c
 <br>
 
 ### Why Use Local Storage?
-1. Simple and concise API(Aplication Progamming Interface).
-2. A bigger storage space than cookies.
-3. Data is not exchanged with the server hence a higher level of security.
-4. Windows with matching origin can access stored data.
-5. Local storage is supported by numerous browsers
-6. Saves permanent information that is accessible offline.
+- Simple and concise API.
+- A bigger storage space than cookies.
+- Data is not exchanged with the server hence a higher level of security.
+- Windows of the same origin can access stored data.
+- Local storage is supported by numerous browsers
+- Local storage saves permanent information that is accessible offline.
+
+### Local Storage Data
+The browser window stores local storage data. This value is received in the form of key-value pairs. It is akin to the JavaScript Object and the JavaScript Object Notation(JSON) syntax. Strings are the data types supported by local storage. Storage capacity varies across browsers. Opera and Safari browsers stores 5 megabytes of data. Internet Explorer, Chrome, and Firefox can receive up to 10 megabytes of data.
+
+
+- Passing an object into localStorage
+
+```
+   const staffData = {
+     name: "Fredrik Clay",
+     designation: "Software Engineer",
+     Age: 40,
+     Hobby: "Golfing",
+   }
+
+   localStorage.setItem("staffData", staffData);
+   console.log(localStorage.getItem("staffData"))  
+
+```
+When you store an object directly into the local storage, it shows `[object object]`. 
+
+![image](set_object_no_string.png)
+
+For you to successfully place an object into the local storage, you need to turn it into a string using the JSON.stringify method.
+
+
+```
+    const staffData = {
+    name: "Fredrik Clay",
+    designation: "Software Engineer",
+    Age: 40,
+    Hobby: "Golfing",
+  }
+
+  localStorage.setItem("staffData", JSON.stringify(staffData));
+  
+  console.log(localStorage.getItem("staffData"))
+```
+![image](set_object_stringify.png)
+
+After stringifying, you now have a JSON string. To convert the JSON string back to an object, use the JSON.parse method. A better way for you to picture JSON.parse is as a data exchanger. 
+
+```
+  let staffDataUpdated = localStorage.getItem("staffData")
+  
+  console.log(JSON.parse(staffDataUpdated))
+```
+
+![image](parse_object.png)
 
 
 ### Local Storage API Methods
@@ -83,15 +130,13 @@ Browsers declare the global objects  on the window.
 ```
     window.localStorage
 ```
-Type this short code inside the console, It should give you all the items inside the local storage and the length of the storage.
+When you type `window.localStorage` inside the console, It should give you all the items inside the local storage and the length of the storage.
 
 ![Image](window_localstorage.png)
 
-Window.localStorage outputs all the items in the local storage and the length.
-
 - Writing to local storage
 
-The method `localStorage.setItem` allows you to write to the localStorage. You will be required to use the key value pair combination like we have already learned. 
+The method `localStorage.setItem` allows you to write to the local storage. You will be required to use the key-value pair combination like you have already learned. 
 
 `Syntax`
 
@@ -104,7 +149,7 @@ The method `localStorage.setItem` allows you to write to the localStorage. You w
 localStorage.setItem(2, "His second name is John")
 
 ```
-If you check the storage, you should see a key `2` with value of `His second name is John`
+If you check the storage, you should see key `2` with value of `His second name is John`
 
 ![Image](ls-set.png)
 
@@ -135,7 +180,7 @@ when you check the console, you should see `12`
 
 ![image](get_console.png)
 
-Trying to get an item that has not been set into the local storage will return `null`. For example, we didnt set any item with the key variety. Hence in the console, we have `null`.
+Trying to get an item that has not been set into the local storage will return `null`. For example,there is no set item with the key `variety`. Hence in the console, you have `null`.
 
 
 ```
@@ -165,7 +210,7 @@ To remove an item from the local storage window, all you need to do is have the 
 
 - Clear Storage
 
-This method removes all the key- value pairs we have initially set to the local storage window.
+This method removes all the key- value pairs you have initially set to the local storage window.
 
 `syntax`
 
@@ -188,7 +233,7 @@ To remove them from the storage
   localStorage.clear()
 
 ```
-Note this is not a selective method like the `removeItem`. 
+This is not a selective method like the `removeItem`. 
 
 <br>
 
@@ -218,58 +263,8 @@ To get the number of all items in the local storage section of the browser, use 
 
 The number `2` is displayed on the console. That is the length of the local storage.
 
-### Local Storage Data
-The browser window stores local storage data. This value is received in the form of key-value pairs. It is akin to the JavaScript Object and the JavaScript Object Notation(JSON) syntax. Strings are the data types supported by local storage. Storage capacity varies across browsers. Opera and Safari browsers stores 5 megabytes of data. Internet Explorer, Chrome, and Firefox can receive up to 10 megabytes.
-
-
-- Passing an object into localStorage
-
-```
-   const staffData = {
-     name: "Fredrik Clay",
-     designation: "Software Engineer",
-     Age: 40,
-     Hobby: "Golfing",
-   }
-
-   localStorage.setItem("staffData", staffData);
-   console.log(localStorage.getItem("staffData"))  
-
-```
-When an object stored directly into the local storage, it shows `[object object]`. Which obviously isn't what anyone would want.
-
-![image](set_object_no_string.png)
-
-To successfully place an object into the local storage, you need to turn it into a string using the JSON.stringify method.
-
-
-```
-    const staffData = {
-    name: "Fredrik Clay",
-    designation: "Software Engineer",
-    Age: 40,
-    Hobby: "Golfing",
-  }
-
-  localStorage.setItem("staffData", JSON.stringify(staffData));
-  
-  console.log(localStorage.getItem("staffData"))
-```
-![image](set_object_stringify.png)
-
-After stringifying, you now have a JSON string. To convert the JSON string back to an object, we will use the JSON.parse method. A better way to picture JSON.parse is as a data exchanger. 
-
-```
-  let staffDataUpdated = localStorage.getItem("staffData")
-  
-  console.log(JSON.parse(staffDataUpdated))
-```
-
-![image](parse_object.png)
-
-
 ### The Data Model
-Local storage adopts the [Associative Array Data model](https://en.wikipedia.org/wiki/Associative_array). In this key/value pair model, each key has to be unique and cannot be used more than once. For every repeated key, the succeeding key replaces the preceeding key. Consider this as an illustration:
+Local storage adopts the [Associative Array Data model](https://en.wikipedia.org/wiki/Associative_array). In this key- value pair model, each key has to be unique and cannot be used more than once. For every repeated key, the succeeding key replaces the preceeding key. Consider this as an illustration:
 
 ```
 
@@ -281,7 +276,7 @@ Local storage adopts the [Associative Array Data model](https://en.wikipedia.org
 
 ```
 
- - Check the storage window, you will see that the key `color` gets the value of `red`. It didn't get green or blue.
+ -  You will see the key `color` gets the value of `red`, when you check the storage window. It didn't get green or blue.
 
 
  Another example
@@ -294,14 +289,14 @@ Local storage adopts the [Associative Array Data model](https://en.wikipedia.org
   localStorage.setItem("position", "Chief Technical Officer")
 ```
 
-Because we used the `position` for all three entries, which violates the Associative Data Model, the position will be used for only the last entries.
+Because `position` was used for all three entries, which violates the Associative Data Model, `position` will be used for only the last entries.
 
 ![image](data_model.png)
 
 ### Some Limitations of Local Storage
-1. Local storage is not suitable for storing sensitive data.
-2. To use other data types on localStorage, you need some JavaScript methods.
-3. Local storage can be used to track how often a user visits a page and also his activities which can be used for targeted avertisement.
+- Local storage is not suitable for storing sensitive data.
+- To use other data types on localStorage, you need some JavaScript methods.
+- Local storage can be used to track how often a user visits a page and also his activities which can be used for targeted avertisement.
   
 ### Wrapping Up
-Now when building simple applications, you can use local storage. It will store data for offline and online access. But of course, local storage is not made for delicate data, so don't store them there. With the help of the simple Javascript APIs discussed, you can decide what to store and update at any time. While doing that, keep data models and types at the back of your mind to prevent replacing values. 
+Now when building simple applications, you can use local storage. It will store data for offline and online access. But of course, local storage is not made for delicate data, so don't store delicate data inside local storage. With the help of the simple JavaScript API discussed, you can decide what to store and update at any time. While doing that, keep data models and types at the back of your mind to prevent replacing values. 
